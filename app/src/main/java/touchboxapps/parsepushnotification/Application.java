@@ -9,7 +9,11 @@ import com.parse.ParseInstallation;
 public class Application extends android.app.Application {
     @Override
     public void onCreate() {
-        Parse.initialize(this, "applicationID", "clientKey");
+        /**
+         * Parse.initialize(Context context, String applicationId, String clientKey)
+         * TODO:Change to your applicationID and ClientKEY
+         */
+        Parse.initialize(this, "applicationId", "clientKey");
         ParseInstallation.getCurrentInstallation().saveInBackground();
         super.onCreate();
     }
